@@ -1,0 +1,43 @@
+@font-face
+{
+    font-family: Hans Kendrick;
+    src: url(./HansKendrick-Regular.otf);
+}
+body
+{
+    font-family: Hans Kendrick;
+    color: white;
+    background-image: url('dark-noise.png');
+}
+
+nav
+{
+    padding-top: 25px;
+    text-align: center;
+}
+
+
+li a
+{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+form
+{
+    padding-top: 25px;
+    text-align: center;
+}
+
+li a:hover
+{
+    color: red;
+}
+
+li
+{
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
