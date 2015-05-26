@@ -24,3 +24,13 @@ get '/power' do
   @result_power = @first**@second
   erb :power
 end
+
+get '/sqrt' do
+  @first = params[:first].to_f
+  if @first >= 0
+    @result_sqrt = Math.sqrt(@first)
+  else 
+    @result_sqrt = "Undefined"
+  end
+  erb :sqrt
+end
