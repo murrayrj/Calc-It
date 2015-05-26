@@ -1,0 +1,15 @@
+<form action="/mortgage" method="get">
+  <h2>Mortgage Payment Calculator</h2>
+  <h3>Principal Amount (£)</h3>
+  <input type="text" name="principal">
+  <h3>Annual Interest Rate (%)</h3>
+  <input type="text" name="interest">
+  <h3>Number of payments (months)</h3>
+  <input type="text" name="payments">
+  <br>
+  <input type="submit">
+</form>
+
+<% if @result_mortgage %>
+  <p>Your monthly mortgage payment is £<%= @result_mortgage.round(2) %></p>
+<% end %>

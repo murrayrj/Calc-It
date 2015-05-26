@@ -47,3 +47,14 @@ get '/bmi' do
   end
   erb :bmi
 end
+
+get '/mortgage' do
+  @principal = params[:principal].to_f
+  @interest = params[:interest].to_f / 12 / 100
+  @payments = params[:payments].to_f
+  int_calc = (1 + @interest)**@payments
+  if @principal > 0
+    @result_mortgage = ((@principal*@interest*int_calc)/(int_calc - 1))
+  end
+  erb :mortgage
+end
