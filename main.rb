@@ -17,3 +17,10 @@ get '/' do
   end
   erb :home
 end
+
+get '/power' do
+  @first = params[:first].to_f
+  @second = params[:second].to_f
+  @result_power = @first**@second
+  erb :power
+end
