@@ -34,3 +34,16 @@ get '/sqrt' do
   end
   erb :sqrt
 end
+
+get '/bmi' do
+  @imp_mass = params[:imp_mass].to_f
+  @imp_height = params[:imp_height].to_f
+  @metric_mass = params[:metric_mass].to_f
+  @metric_height = params[:metric_height].to_f
+  if params[:imp_mass] && params[:imp_height].empty?
+    @metric_result = @metric_mass / (@metric_height**2)
+  elsif params[:metric_mass] && params[:metric_height].empty?
+    @imp_result = (@imp_mass / (@imp_height**2)) * 703
+  end
+  erb :bmi
+end
