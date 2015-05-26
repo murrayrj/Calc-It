@@ -58,3 +58,20 @@ get '/mortgage' do
   end
   erb :mortgage
 end
+
+get '/trip' do
+  @dist = params[:dist].to_f
+  @mpg = params[:mpg].to_f
+  @cost = params[:cost].to_f
+  @speed = params[:speed].to_f
+  if @mpg > 60
+    actualmpg = @mpg - ((@speed - 60)* 2)
+  else
+    actualmpg = @mpg
+  end
+  if @dist > 0
+    @time = (@dist / @speed).round(2)
+    @cost = ((@dist / actualmpg) * @cost).round(2)
+  end
+  erb :trip
+end
