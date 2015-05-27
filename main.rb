@@ -71,7 +71,7 @@ get '/trip_calc' do
   end
   if @dist > 0
     @time = (@dist / @speed).round(2)
-    @cost = ((@dist / actualmpg) * @cost).round(2)
+    @cost_int = ((@dist / actualmpg) * @cost).round(2)
   end
-  erb :trip
+  erb :trip_calc
 end

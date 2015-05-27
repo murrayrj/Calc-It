@@ -1,4 +1,4 @@
-<form action='/trip' method='get'>
+<form action='/trip_calc' method='get'>
   <h2>Trip Time & Cost Calculator</h2>
   <h3>Distance (miles)</h3>
   <input type="text" name="dist">
@@ -13,5 +13,5 @@
 </form>
 
 <% if @time %>
-<p>Your trip will take <%= @time %> hours and petrol will cost you £<%= @cost %></p>
+<p>Your trip will take <%= @time %> hours and petrol will cost you £<%= @cost_int %></p>
 <% end %>
