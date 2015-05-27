@@ -41,3 +41,6 @@ li
     border: 2px solid white;
     border-radius: 5px;
 }
+p {
+    text-align: center;
+}

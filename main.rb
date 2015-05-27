@@ -59,7 +59,7 @@ get '/mortgage' do
   erb :mortgage
 end
 
-get '/trip' do
+get '/trip_calc' do
   @dist = params[:dist].to_f
   @mpg = params[:mpg].to_f
   @cost = params[:cost].to_f

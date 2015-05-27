@@ -1,7 +1,10 @@
 <form action='/sqrt' method='get'>
+  <h2>Square Root</h2>
   <label for="first">NUMBER</label>
   <input type="text" name="first" placeholder="Enter the number">
   <input type="submit">
 </form>
 
-<p>The result of the square root of <%= @first %> is <%= @result_sqrt.round(2) %></p>
+<% if @result_sqrt > 0 || @result_sqrt == "Undefined" %>
+  <p>The result of the square root of <%= @first %> is <%= @result_sqrt.round(2) %></p>
+<% end %>

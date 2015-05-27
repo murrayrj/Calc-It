@@ -1,0 +1,17 @@
+<form action='/trip' method='get'>
+  <h2>Trip Time & Cost Calculator</h2>
+  <h3>Distance (miles)</h3>
+  <input type="text" name="dist">
+  <h3>Fuel Efficiency (mpg)</h3>
+  <input type="text" name="mpg">
+  <h3>Cost of Petrol (per gallon)</h3>
+  <input type="text" name="cost">
+  <h3>Average speed (mph):</h3>
+  <input type="text" name="speed">
+  <br>
+  <input type="submit">
+</form>
+
+<% if @time %>
+<p>Your trip will take <%= @time %> hours and petrol will cost you £<%= @cost %></p>
+<% end %>
